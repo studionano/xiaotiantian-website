@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晓田田科技 - AI赋能体育</title>
+    <!-- 引入思源黑体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 全局样式 */
+        :root {
+            --primary-color: #1A0B2E;
+            --secondary-color: #6B57CB;
+            --accent-color: #F5D547;
+            --text-color: #333333;
+            --light-bg: #F5F5F5;
+            --white: #FFFFFF;
+            --gradient-start: #E7E2F3;
+            --gradient-end: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+            background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 25px;
+            border: 2px solid var(--primary-color);
+            border-radius: 30px;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* 导航栏样式 */
+        .header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav ul {
+            display: flex;
+        }
+
+        .nav ul li {
+            margin-left: 30px;
+        }
+
+        .language-selector select {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 5px 10px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* 曲线动画区域 (占位) */
+        .wave-animation {
+            height: 300px;
+            background-color: var(--primary-color);
+            position: relative;
+            overflow: hidden;
+            padding-top: 70px;
+            background-image: linear-gradient(rgba(26, 11, 46, 0.95) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(26, 11, 46, 0.95) 1px, transparent 1px);
+            background-size: 30px 30px;
+            background-position: center center;
+        }
+
+        .wave-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-color);
+            transform: translateY(-50%);
+        }
+
+        .wave-dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+        }
+
+        .wave-dot-small {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--white);
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* 主标语区域 */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        /* 业务范围区域 */
+        .services {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+            position: relative;
+        }
+
+        .services-content {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .services-intro {
+            width: 30%;
+            padding-right: 30px;
+        }
+
+        .services-list {
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .service-item {
+            padding: 20px;
+        }
+
+        .service-icon {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        .service-icon-placeholder {
+            width: 30px;
+            height: 30px;
+            background-color: var(--secondary-color);
+            opacity: 0.5;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        /* 产品展示区域 - 调整后 */
+        .products {
+            padding: 80px 0 120px; /* 增加底部padding，为手机留出空间 */
+            position: relative; /* 添加相对定位，便于子元素绝对定位 */
+        }
+
+        .product-content {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            position: relative; /* 相对定位 */
+            min-height: 600px; /* 确保有足够的高度容纳内容 */
+        }
+
+        /* 左侧产品描述定位 */
+        .product-description {
+            width: 40%;
+            position: absolute;
+            left: 0;
+            bottom: 0; /* 底部对齐 */
+            padding-right: 50px;
+            text-align: left;
+            max-width: 450px; /* 限制最大宽度 */
+        }
+
+        /* 中间手机展示定位 */
+        .product-showcase {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: static; /* 静态定位，让它自然流动 */
+        }
+
+        .phone-mockup {
+            position: absolute;
+            bottom: 0; /* 底部对齐 */
+            left: 50%;
+            transform: translateX(-50%); /* 水平居中 */
+            width: 280px;
+            height: 570px;
+            background-color: var(--primary-color);
+            border-radius: 40px;
+            padding: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            z-index: 10; /* 确保手机在前面 */
+        }
+
+        .app-screenshot {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+            background-color: #543b7a;
+        }
+
+        /* 右侧产品特性定位 */
+        .product-features {
+            width: 40%;
+            position: absolute;
+            right: 0;
+            bottom: 0; /* 底部对齐 */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 300px; /* 限制最大宽度 */
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            background-color: var(--white);
+            padding: 10px 15px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        /* 产品特色区域 */
+        .features {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 15px;
+        }
+
+        /* 关于我们区域 */
+        .about {
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-content {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .about-bg-dots {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40%;
+            height: 100%;
+            background-image: radial-gradient(var(--secondary-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+
+        .about-text {
+            width: 60%;
+            padding-left: 50px;
+        }
+
+        /* 联系我们区域 */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+
+        .email-contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .email-contact i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        .footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1200px) {
+            .product-description {
+                width: 35%;
+            }
+            
+            .product-features {
+                width: 35%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .services-intro {
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .services-list {
+                width: 100%;
+            }
+
+            .product-content {
+                min-height: 900px; /* 增加移动端的高度 */
+            }
+            
+            .product-description {
+                width: 100%;
+                position: relative;
+                padding-right: 0;
+                margin-bottom: 600px; /* 给手机图留出空间 */
+                max-width: 100%;
+                text-align: center;
+            }
+            
+            .phone-mockup {
+                top: 300px; /* 调整手机位置 */
+                bottom: auto;
+            }
+            
+            .product-features {
+                width: 100%;
+                position: relative;
+                max-width: 100%;
+                align-items: center;
+                margin-top: 50px;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-bg-dots {
+                display: none;
+            }
+
+            .about-text {
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .services-list {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .main-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-content {
+                min-height: 800px;
+            }
+            
+            .product-description {
+                margin-bottom: 500px;
+            }
+            
+            .phone-mockup {
+                width: 240px;
+                height: 490px;
+            }
+            
+            .feature {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#top">
+                    <!-- 占位SVG作为logo -->
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="15" cy="20" r="10" fill="#8A7CE0"/>
+                        <circle cx="25" cy="20" r="10" fill="#8A7CE0" fill-opacity="0.7"/>
+                    </svg>
+                    <span>晓田田科技</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#top">主页</a></li>
+                    <li><a href="#services">业务范围</a></li>
+                    <li><a href="#products">产品展示</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <select>
+                    <option value="zh">中文</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 曲线动画区域 (占位) -->
+    <section class="wave-animation">
+        <div class="wave-placeholder"></div>
+        <div class="wave-dot"></div>
+        <div class="wave-dot-small"></div>
+    </section>
+
+    <!-- 主标语区域 -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1 class="main-title">AI赋能体育，<br>智创无限可能</h1>
+            <p class="subtitle">自动识别运动回合，瞬间生成精彩集锦，深度分析技术数据，科学规划个性化训练！</p>
+            <a href="#about" class="cta-button">了解我们详情</a>
+        </div>
+    </section>
+
+    <!-- 业务范围区域 -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">我们的业务范围</h2>
+            <div class="services-content">
+                <div class="services-intro">
+                    <p>我们专注于AI视觉识别技术开发、体育数据分析平台搭建、智能移动应用定制以及体育科技领域的技术咨询服务，为体育训练与比赛提供全方位的数字化解决方案。</p>
+                </div>
+                <div class="services-list">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <span class="number">01</span>
+                            <div class="service-icon-placeholder"></div>
+                        </div>
+                        <h3>AI视觉识别与处理</h3>
+                        <p>运用先进的人工智能技术，我们专注于小物体检测与运动轨迹分析，为体育视频处理提供智能化解决方案。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <span class="number">02</span>
+                            <div class="service-icon-placeholder"></div>
+                        </div>
+                        <h3>移动应用定制开发</h3>
+                        <p>我们提供从构思到上线的全流程移动应用开发服务，融合先进技术与优质用户体验，打造专业级应用产品。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <span class="number">03</span>
+                            <div class="service-icon-placeholder"></div>
+                        </div>
+                        <h3>数据分析与可视化</h3>
+                        <p>通过强大的数据处理能力，我们将复杂的运动数据转化为直观的分析结果，帮助用户发现潜在价值与提升空间。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <span class="number">04</span>
+                            <div class="service-icon-placeholder"></div>
+                        </div>
+                        <h3>体育技术咨询</h3>
+                        <p>我们提供AI技术在体育领域的专业咨询服务，帮助合作伙伴构建创新解决方案，实现技术价值最大化。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示区域 - 调整后的布局 -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">击智Vamos</h2>
+            <div class="product-content">
+                <!-- 左侧产品描述 -->
+                <div class="product-description">
+                    <p>击智Vamos是一款专为网球爱好者和专业运动员打造的智能视频分析应用。通过先进的AI运动小物体检测识别技术，击智能够自动识别并剪辑网球视频中的有效回合，让您专注于比赛精华。应用内置智能分析引擎，可对您的击球轨迹、步伐移动和技术动作进行专业评估，提供数据化的表现报告。</p>
+                    <a href="#" class="cta-button">即将上线</a>
+                </div>
+                
+                <!-- 中间手机展示 -->
+                <div class="product-showcase">
+                    <div class="phone-mockup">
+                        <!-- 手机应用截图 -->
+                        <div class="app-screenshot">
+                            <!-- 此处添加应用截图 -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 右侧产品特性 -->
+                <div class="product-features">
+                    <div class="feature"><i class="fas fa-heart"></i> AI视频智能处理</div>
+                    <div class="feature"><i class="fas fa-chart-line"></i> 专业体育数据分析</div>
+                    <div class="feature"><i class="fas fa-bolt"></i> 本地化高效处理</div>
+                    <div class="feature"><i class="fas fa-user"></i> 个性化训练规划</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品特色区域 -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">产品特色</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>数据分析</h3>
+                    <p>数据分析功能提供详尽的网球比赛数据报告。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>机器学习</h3>
+                    <p>机器学习技术持续优化用户体验。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>训练助手</h3>
+                    <p>训练助手帮助用户规划个性化网球训练计划。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>赛事分析</h3>
+                    <p>赛事分析功能让用户更深入了解比赛数据。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们区域 -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-bg-dots"></div>
+                <div class="about-text">
+                    <h2 class="section-title">晓田田科技</h2>
+                    <p>晓田田文化科技(上海)有限公司是一家专注于人工智能技术与体育结合的创新科技企业。</p>
+                    <p>我们致力于通过先进的AI视觉识别技术、深度学习算法和智能数据分析，为体育爱好者和专业运动员提供高效、精准的数字化解决方案。公司汇聚了在人工智能、移动应用开发和体育科技领域拥有丰富经验的技术专家，正在不断探索AI技术在体育领域的创新应用。</p>
+                    <a href="#contact" class="cta-button">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们区域 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-info">
+                <div class="email-contact">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@xiaotiantian.net / studionano001@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">© 2025 晓田田文化科技(上海)有限公司</p>
+        </div>
+    </footer>
+
+    <!-- 简单的JavaScript实现平滑滚动 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 平滑滚动导航
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70, // 减去导航栏高度
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 移动端菜单切换
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const nav = document.querySelector('.nav');
+            
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', function() {
+                    nav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
