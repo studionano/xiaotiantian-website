@@ -8,520 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- 引入图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* 全局样式 */
-        :root {
-            --primary-color: #1A0B2E;
-            --secondary-color: #6B57CB;
-            --accent-color: #F5D547;
-            --text-color: #333333;
-            --light-bg: #F5F5F5;
-            --white: #FFFFFF;
-            --gradient-start: #E7E2F3;
-            --gradient-end: #FFFFFF;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Noto Sans SC', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            overflow-x: hidden;
-            background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 10px 25px;
-            border: 2px solid var(--primary-color);
-            border-radius: 30px;
-            color: var(--primary-color);
-            font-weight: 500;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        /* 导航栏样式 */
-        .header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 15px 0;
-        }
-
-        .header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo a {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .nav ul {
-            display: flex;
-        }
-
-        .nav ul li {
-            margin-left: 30px;
-        }
-
-        .language-selector select {
-            background-color: var(--primary-color);
-            color: var(--white);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 5px 10px;
-            border-radius: 5px;
-            outline: none;
-        }
-
-        .mobile-menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* 曲线动画区域 (占位) */
-        .wave-animation {
-            height: 300px;
-            background-color: var(--primary-color);
-            position: relative;
-            overflow: hidden;
-            padding-top: 70px;
-            background-image: linear-gradient(rgba(26, 11, 46, 0.95) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(26, 11, 46, 0.95) 1px, transparent 1px);
-            background-size: 30px 30px;
-            background-position: center center;
-        }
-
-        .wave-placeholder {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: var(--accent-color);
-            transform: translateY(-50%);
-        }
-
-        .wave-dot {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: var(--accent-color);
-            top: 50%;
-            left: 60%;
-            transform: translate(-50%, -50%);
-        }
-
-        .wave-dot-small {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: var(--white);
-            top: 50%;
-            left: 20%;
-            transform: translate(-50%, -50%);
-        }
-
-        /* 主标语区域 */
-        .hero {
-            padding: 80px 0;
-            text-align: center;
-            background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
-        }
-
-        .main-title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 40px;
-        }
-
-        /* 业务范围区域 */
-        .services {
-            padding: 80px 0;
-            background-color: var(--light-bg);
-            position: relative;
-        }
-
-        .services-content {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 50px;
-        }
-
-        .services-intro {
-            width: 30%;
-            padding-right: 30px;
-        }
-
-        .services-list {
-            width: 70%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .service-item {
-            padding: 20px;
-        }
-
-        .service-icon {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .number {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-right: 10px;
-        }
-
-        .service-icon-placeholder {
-            width: 30px;
-            height: 30px;
-            background-color: var(--secondary-color);
-            opacity: 0.5;
-            border-radius: 50%;
-            margin-left: 10px;
-        }
-
-        /* 产品展示区域 - 调整后 */
-        .products {
-            padding: 80px 0 120px; /* 增加底部padding，为手机留出空间 */
-            position: relative; /* 添加相对定位，便于子元素绝对定位 */
-        }
-
-        .product-content {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 50px;
-            position: relative; /* 相对定位 */
-            min-height: 600px; /* 确保有足够的高度容纳内容 */
-        }
-
-        /* 左侧产品描述定位 */
-        .product-description {
-            width: 40%;
-            position: absolute;
-            left: 0;
-            bottom: 0; /* 底部对齐 */
-            padding-right: 50px;
-            text-align: left;
-            max-width: 450px; /* 限制最大宽度 */
-        }
-
-        /* 中间手机展示定位 */
-        .product-showcase {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            position: static; /* 静态定位，让它自然流动 */
-        }
-
-        .phone-mockup {
-            position: absolute;
-            bottom: 0; /* 底部对齐 */
-            left: 50%;
-            transform: translateX(-50%); /* 水平居中 */
-            width: 280px;
-            height: 570px;
-            background-color: var(--primary-color);
-            border-radius: 40px;
-            padding: 15px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            z-index: 10; /* 确保手机在前面 */
-        }
-
-        .app-screenshot {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 30px;
-            background-color: #543b7a;
-        }
-
-        /* 右侧产品特性定位 */
-        .product-features {
-            width: 40%;
-            position: absolute;
-            right: 0;
-            bottom: 0; /* 底部对齐 */
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 300px; /* 限制最大宽度 */
-        }
-
-        .feature {
-            display: flex;
-            align-items: center;
-            background-color: var(--white);
-            padding: 10px 15px;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .feature i {
-            margin-right: 10px;
-            color: var(--primary-color);
-        }
-
-        /* 产品特色区域 */
-        .features {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .feature-item {
-            text-align: center;
-            padding: 30px;
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        .feature-item h3 {
-            margin-bottom: 15px;
-        }
-
-        /* 关于我们区域 */
-        .about {
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-content {
-            position: relative;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .about-bg-dots {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 40%;
-            height: 100%;
-            background-image: radial-gradient(var(--secondary-color) 1px, transparent 1px);
-            background-size: 20px 20px;
-            opacity: 0.3;
-        }
-
-        .about-text {
-            width: 60%;
-            padding-left: 50px;
-        }
-
-        /* 联系我们区域 */
-        .contact {
-            padding: 80px 0;
-            background-color: var(--light-bg);
-            text-align: center;
-        }
-
-        .email-contact {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 30px;
-        }
-
-        .email-contact i {
-            font-size: 1.5rem;
-            margin-right: 15px;
-            color: var(--primary-color);
-        }
-
-        /* 页脚 */
-        .footer {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 1200px) {
-            .product-description {
-                width: 35%;
-            }
-            
-            .product-features {
-                width: 35%;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .services-intro {
-                width: 100%;
-                padding-right: 0;
-                margin-bottom: 30px;
-            }
-
-            .services-list {
-                width: 100%;
-            }
-
-            .product-content {
-                min-height: 900px; /* 增加移动端的高度 */
-            }
-            
-            .product-description {
-                width: 100%;
-                position: relative;
-                padding-right: 0;
-                margin-bottom: 600px; /* 给手机图留出空间 */
-                max-width: 100%;
-                text-align: center;
-            }
-            
-            .phone-mockup {
-                top: 300px; /* 调整手机位置 */
-                bottom: auto;
-            }
-            
-            .product-features {
-                width: 100%;
-                position: relative;
-                max-width: 100%;
-                align-items: center;
-                margin-top: 50px;
-            }
-
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .about-bg-dots {
-                display: none;
-            }
-
-            .about-text {
-                width: 100%;
-                padding-left: 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav {
-                display: none;
-            }
-
-            .mobile-menu-toggle {
-                display: block;
-            }
-
-            .services-list {
-                grid-template-columns: 1fr;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .main-title {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .product-content {
-                min-height: 800px;
-            }
-            
-            .product-description {
-                margin-bottom: 500px;
-            }
-            
-            .phone-mockup {
-                width: 240px;
-                height: 490px;
-            }
-            
-            .feature {
-                width: 100%;
-            }
-        }
-    </style>
+    <!-- 引入样式表 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入动画样式 -->
+    <link rel="stylesheet" href="css/tennis_animation.css">
 </head>
 <body>
+    <div id="top"></div>
     <!-- 导航栏 -->
     <header class="header">
         <div class="container">
@@ -544,23 +37,30 @@
                     <li><a href="#contact">联系我们</a></li>
                 </ul>
             </nav>
-            <div class="language-selector">
-                <select>
-                    <option value="zh">中文</option>
-                    <option value="en">English</option>
-                </select>
-            </div>
             <div class="mobile-menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </header>
 
-    <!-- 曲线动画区域 (占位) -->
-    <section class="wave-animation">
-        <div class="wave-placeholder"></div>
-        <div class="wave-dot"></div>
-        <div class="wave-dot-small"></div>
+    <!-- 网球动画区域 -->
+    <section class="animation-container">
+        <!-- 背景网格 -->
+        <div class="grid"></div>
+        
+        <!-- SVG路径 -->
+        <svg class="path" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="path-line" d="M10,30 C20,10 30,10 40,20 S60,40 70,15 S80,30 90,35" />
+        </svg>
+        
+        <!-- 网球 -->
+        <div class="tennis-ball"></div>
+        
+        <!-- 数据点 -->
+        <div class="data-point data-point-1"></div>
+        <div class="data-point data-point-2"></div>
+        <div class="data-point data-point-3"></div>
+        <div class="data-point data-point-4"></div>
     </section>
 
     <!-- 主标语区域 -->
@@ -568,47 +68,72 @@
         <div class="container">
             <h1 class="main-title">AI赋能体育，<br>智创无限可能</h1>
             <p class="subtitle">自动识别运动回合，瞬间生成精彩集锦，深度分析技术数据，科学规划个性化训练！</p>
-            <a href="#about" class="cta-button">了解我们详情</a>
+            <a href="#about" class="cta-button">关于晓田田科技</a>
         </div>
     </section>
 
-    <!-- 业务范围区域 -->
+    <!-- 业务范围区域 - 已更新 -->
     <section id="services" class="services">
+        <!-- 多层圆形背景效果 -->
+        <div class="services-circle main-circle"></div>
+        <div class="services-circle circle-small"></div>
+        <div class="services-circle circle-tiny"></div>
+        
         <div class="container">
-            <h2 class="section-title">我们的业务范围</h2>
-            <div class="services-content">
+            <div class="services-grid">
+                <!-- 左侧标题和介绍 -->
                 <div class="services-intro">
+                    <h2 class="section-title">我们的业务范围</h2>
                     <p>我们专注于AI视觉识别技术开发、体育数据分析平台搭建、智能移动应用定制以及体育科技领域的技术咨询服务，为体育训练与比赛提供全方位的数字化解决方案。</p>
                 </div>
-                <div class="services-list">
-                    <div class="service-item">
+                
+                <!-- 右侧业务卡片 -->
+                <div class="services-cards">
+                    <div class="service-card">
                         <div class="service-icon">
                             <span class="number">01</span>
-                            <div class="service-icon-placeholder"></div>
+                            <svg class="service-svg-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 21H16M12 3V17M12 17L16 13M12 17L8 13" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </div>
                         <h3>AI视觉识别与处理</h3>
                         <p>运用先进的人工智能技术，我们专注于小物体检测与运动轨迹分析，为体育视频处理提供智能化解决方案。</p>
                     </div>
-                    <div class="service-item">
+                    
+                    <div class="service-card">
                         <div class="service-icon">
                             <span class="number">02</span>
-                            <div class="service-icon-placeholder"></div>
+                            <svg class="service-svg-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </div>
                         <h3>移动应用定制开发</h3>
                         <p>我们提供从构思到上线的全流程移动应用开发服务，融合先进技术与优质用户体验，打造专业级应用产品。</p>
                     </div>
-                    <div class="service-item">
+                    
+                    <div class="service-card">
                         <div class="service-icon">
                             <span class="number">03</span>
-                            <div class="service-icon-placeholder"></div>
+                            <svg class="service-svg-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 20V10" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 20V4" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 20V14" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </div>
                         <h3>数据分析与可视化</h3>
                         <p>通过强大的数据处理能力，我们将复杂的运动数据转化为直观的分析结果，帮助用户发现潜在价值与提升空间。</p>
                     </div>
-                    <div class="service-item">
+                    
+                    <div class="service-card">
                         <div class="service-icon">
                             <span class="number">04</span>
-                            <div class="service-icon-placeholder"></div>
+                            <svg class="service-svg-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 16V8.00002C20.9996 7.6493 20.9071 7.30483 20.7315 7.00119C20.556 6.69754 20.3037 6.44539 20 6.27002L13 2.27002C12.696 2.09449 12.3511 2.00208 12 2.00208C11.6489 2.00208 11.304 2.09449 11 2.27002L4 6.27002C3.69626 6.44539 3.44398 6.69754 3.26846 7.00119C3.09294 7.30483 3.00036 7.6493 3 8.00002V16C3.00036 16.3508 3.09294 16.6952 3.26846 16.9989C3.44398 17.3025 3.69626 17.5547 4 17.73L11 21.73C11.304 21.9056 11.6489 21.998 12 21.998C12.3511 21.998 12.696 21.9056 13 21.73L20 17.73C20.3037 17.5547 20.556 17.3025 20.7315 16.9989C20.9071 16.6952 20.9996 16.3508 21 16Z" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.27002 6.96002L12 12.01L20.73 6.96002" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 22.08V12" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </div>
                         <h3>体育技术咨询</h3>
                         <p>我们提供AI技术在体育领域的专业咨询服务，帮助合作伙伴构建创新解决方案，实现技术价值最大化。</p>
@@ -618,7 +143,7 @@
         </div>
     </section>
 
-    <!-- 产品展示区域 - 调整后的布局 -->
+    <!-- 产品展示区域 -->
     <section id="products" class="products">
         <div class="container">
             <h2 class="section-title">击智Vamos</h2>
@@ -631,11 +156,8 @@
                 
                 <!-- 中间手机展示 -->
                 <div class="product-showcase">
-                    <div class="phone-mockup">
-                        <!-- 手机应用截图 -->
-                        <div class="app-screenshot">
-                            <!-- 此处添加应用截图 -->
-                        </div>
+                    <div class="product-showcase">
+                        <img src="images/screenshot.png" alt="击智Vamos应用截图" class="app-screenshot">
                     </div>
                 </div>
                 
@@ -691,7 +213,12 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
-                <div class="about-bg-dots"></div>
+                <div class="about-bg-dots">
+                    <!-- 添加动画容器 -->
+                    <div class="animation-container about-animation">
+                        <canvas id="aboutAnimationCanvas"></canvas> <!-- 使用特定ID -->
+                    </div>
+                </div>
                 <div class="about-text">
                     <h2 class="section-title">晓田田科技</h2>
                     <p>晓田田文化科技(上海)有限公司是一家专注于人工智能技术与体育结合的创新科技企业。</p>
@@ -709,7 +236,7 @@
             <div class="contact-info">
                 <div class="email-contact">
                     <i class="fas fa-envelope"></i>
-                    <p>info@xiaotiantian.net / studionano001@gmail.com</p>
+                    <p>info@xiaotiantian.tech</p>
                 </div>
             </div>
         </div>
@@ -755,5 +282,6 @@
             }
         });
     </script>
+    <script src="js/tennis-animation.js"></script>
 </body>
 </html>
