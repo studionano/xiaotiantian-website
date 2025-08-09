@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "J56VXVW962.com.xiaotiantiantech.vamos",
+        "paths": [
+          "/vamos/*",
+          "/vamos/wx_callback"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["J56VXVW962.com.xiaotiantiantech.vamos"]
+  }
+}
