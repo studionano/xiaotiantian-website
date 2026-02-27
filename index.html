@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>晓田田科技 - AI赋能体育</title>
+    <title>XiaoTianTian Tech - AI Empowering Sports</title>
     <!-- Favicon 引用 -->
     <link rel="icon" type="image/png" href="images/tennis.png">
     <link rel="shortcut icon" type="image/png" href="images/tennis.png">
@@ -24,23 +24,26 @@
         <div class="container">
             <div class="logo">
                 <a href="#top">
-                    <!-- 占位SVG作为logo -->
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="15" cy="20" r="10" fill="#8A7CE0"/>
                         <circle cx="25" cy="20" r="10" fill="#8A7CE0" fill-opacity="0.7"/>
                     </svg>
-                    <span>晓田田科技</span>
+                    <span data-i18n="nav.brand">XiaoTianTian Tech</span>
                 </a>
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#top">主页</a></li>
-                    <li><a href="#services">业务范围</a></li>
-                    <li><a href="#products">产品展示</a></li>
-                    <li><a href="#about">关于我们</a></li>
-                    <li><a href="#contact">联系我们</a></li>
+                    <li><a href="#top" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#products" data-i18n="nav.products">Products</a></li>
+                    <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                    <li><a href="#about" data-i18n="nav.about">About</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                 </ul>
             </nav>
+            <button class="lang-toggle" id="langToggle">
+                <i class="fas fa-globe"></i>
+                <span id="langLabel">中文</span>
+            </button>
             <div class="mobile-menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -51,15 +54,15 @@
     <section class="animation-container">
         <!-- 背景网格 -->
         <div class="grid"></div>
-        
+
         <!-- SVG路径 -->
         <svg class="path" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path class="path-line" d="M10,30 C20,10 30,10 40,20 S60,40 70,15 S80,30 90,35" />
         </svg>
-        
+
         <!-- 网球 -->
         <div class="tennis-ball"></div>
-        
+
         <!-- 数据点 -->
         <div class="data-point data-point-1"></div>
         <div class="data-point data-point-2"></div>
@@ -70,27 +73,97 @@
     <!-- 主标语区域 -->
     <section id="hero" class="hero">
         <div class="container">
-            <h1 class="main-title">AI赋能体育，<br>智创无限可能</h1>
-            <p class="subtitle">自动识别运动回合，瞬间生成精彩集锦，深度分析技术数据，科学规划个性化训练！</p>
-            <a href="#about" class="cta-button">关于晓田田科技</a>
+            <h1 class="main-title" data-i18n-html="hero.title">AI Empowering Sports,<br>Creating Infinite Possibilities</h1>
+            <p class="subtitle" data-i18n="hero.subtitle">Auto-detect game rallies, instantly generate highlights, deeply analyze technical data, and scientifically plan personalized training!</p>
+            <a href="#about" class="cta-button" data-i18n="hero.cta">About XiaoTianTian Tech</a>
         </div>
     </section>
 
-    <!-- 业务范围区域 - 已更新 -->
+    <!-- 产品展示区域（移至业务范围之前） -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title" data-i18n="products.title">SmartHit Tennis</h2>
+            <div class="product-content">
+                <!-- 左侧产品描述 -->
+                <div class="product-description">
+                    <p data-i18n="products.desc">SmartHit Tennis is an intelligent video analysis app designed for tennis enthusiasts and professional athletes. Using advanced AI small object detection technology, SmartHit Tennis can automatically identify and clip effective rallies from tennis videos, letting you focus on the highlights. The built-in intelligent analysis engine professionally evaluates your shot trajectory, footwork, and technique, providing data-driven performance reports.</p>
+                    <a href="https://apps.apple.com/app/smarthit-tennis/id6751442505" class="app-store-badge" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-apple"></i>
+                        <div class="badge-text">
+                            <small data-i18n="products.downloadOn">Download on the</small>
+                            <span data-i18n="products.appStore">App Store</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 中间手机展示 -->
+                <div class="product-showcase">
+                    <img src="images/screenshot.png" alt="SmartHit Tennis App Screenshot" data-i18n-alt="products.imgAlt" class="app-screenshot">
+                </div>
+
+                <!-- 右侧产品特性 -->
+                <div class="product-features">
+                    <div class="feature"><i class="fas fa-heart"></i> <span data-i18n="products.feature1">AI Video Processing</span></div>
+                    <div class="feature"><i class="fas fa-chart-line"></i> <span data-i18n="products.feature2">Pro Sports Analytics</span></div>
+                    <div class="feature"><i class="fas fa-bolt"></i> <span data-i18n="products.feature3">Local Processing</span></div>
+                    <div class="feature"><i class="fas fa-user"></i> <span data-i18n="products.feature4">Personalized Training</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品特色区域 -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title" data-i18n="features.title">Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 data-i18n="features.analytics.title">Data Analytics</h3>
+                    <p data-i18n="features.analytics.desc">Comprehensive tennis match data reports and analysis.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 data-i18n="features.ml.title">Machine Learning</h3>
+                    <p data-i18n="features.ml.desc">Machine learning technology continuously optimizes user experience.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3 data-i18n="features.training.title">Training Assistant</h3>
+                    <p data-i18n="features.training.desc">Helps users plan personalized tennis training programs.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 data-i18n="features.match.title">Match Analysis</h3>
+                    <p data-i18n="features.match.desc">Deep insights into match data and performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 业务范围区域 -->
     <section id="services" class="services">
         <!-- 多层圆形背景效果 -->
         <div class="services-circle main-circle"></div>
         <div class="services-circle circle-small"></div>
         <div class="services-circle circle-tiny"></div>
-        
+
         <div class="container">
             <div class="services-grid">
                 <!-- 左侧标题和介绍 -->
                 <div class="services-intro">
-                    <h2 class="section-title">我们的业务范围</h2>
-                    <p>我们专注于AI视觉识别技术开发、体育数据分析平台搭建、智能移动应用定制以及体育科技领域的技术咨询服务，为体育训练与比赛提供全方位的数字化解决方案。</p>
+                    <h2 class="section-title" data-i18n="services.title">Our Services</h2>
+                    <p data-i18n="services.desc">We focus on AI visual recognition technology, sports data analytics platforms, intelligent mobile application development, and sports technology consulting, providing comprehensive digital solutions for sports training and competition.</p>
                 </div>
-                
+
                 <!-- 右侧业务卡片 -->
                 <div class="services-cards">
                     <div class="service-card">
@@ -100,10 +173,10 @@
                                 <path d="M8 21H16M12 3V17M12 17L16 13M12 17L8 13" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>AI视觉识别与处理</h3>
-                        <p>运用先进的人工智能技术，我们专注于小物体检测与运动轨迹分析，为体育视频处理提供智能化解决方案。</p>
+                        <h3 data-i18n="services.card1.title">AI Visual Recognition</h3>
+                        <p data-i18n="services.card1.desc">Using advanced AI technology, we specialize in small object detection and motion trajectory analysis, providing intelligent solutions for sports video processing.</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <span class="number">02</span>
@@ -113,10 +186,10 @@
                                 <path d="M2 12L12 17L22 12" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>移动应用定制开发</h3>
-                        <p>我们提供从构思到上线的全流程移动应用开发服务，融合先进技术与优质用户体验，打造专业级应用产品。</p>
+                        <h3 data-i18n="services.card2.title">Mobile App Development</h3>
+                        <p data-i18n="services.card2.desc">We offer end-to-end mobile app development services, combining advanced technology with excellent user experience to create professional-grade applications.</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <span class="number">03</span>
@@ -126,10 +199,10 @@
                                 <path d="M6 20V14" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>数据分析与可视化</h3>
-                        <p>通过强大的数据处理能力，我们将复杂的运动数据转化为直观的分析结果，帮助用户发现潜在价值与提升空间。</p>
+                        <h3 data-i18n="services.card3.title">Data Analytics & Visualization</h3>
+                        <p data-i18n="services.card3.desc">Through powerful data processing, we transform complex sports data into intuitive analysis results, helping users discover potential value and areas for improvement.</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <span class="number">04</span>
@@ -139,75 +212,9 @@
                                 <path d="M12 22.08V12" stroke="#6B57CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>体育技术咨询</h3>
-                        <p>我们提供AI技术在体育领域的专业咨询服务，帮助合作伙伴构建创新解决方案，实现技术价值最大化。</p>
+                        <h3 data-i18n="services.card4.title">Sports Tech Consulting</h3>
+                        <p data-i18n="services.card4.desc">We provide professional consulting services for AI in sports, helping partners build innovative solutions and maximize technology value.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 产品展示区域 -->
-    <section id="products" class="products">
-        <div class="container">
-            <h2 class="section-title">击智网球</h2>
-            <div class="product-content">
-                <!-- 左侧产品描述 -->
-                <div class="product-description">
-                    <p>击智网球是一款专为网球爱好者和专业运动员打造的智能视频分析应用。通过先进的AI运动小物体检测识别技术，击智网球能够自动识别并剪辑网球视频中的有效回合，让您专注于比赛精华。应用内置智能分析引擎，可对您的击球轨迹、步伐移动和技术动作进行专业评估，提供数据化的表现报告。</p>
-                    <a href="#" class="cta-button">火热上线🔥</a>
-                </div>
-                
-                <!-- 中间手机展示 -->
-                <div class="product-showcase">
-                    <div class="product-showcase">
-                        <img src="images/screenshot.png" alt="击智网球应用截图" class="app-screenshot">
-                    </div>
-                </div>
-                
-                <!-- 右侧产品特性 -->
-                <div class="product-features">
-                    <div class="feature"><i class="fas fa-heart"></i> AI视频智能处理</div>
-                    <div class="feature"><i class="fas fa-chart-line"></i> 专业体育数据分析</div>
-                    <div class="feature"><i class="fas fa-bolt"></i> 本地化高效处理</div>
-                    <div class="feature"><i class="fas fa-user"></i> 个性化训练规划</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 产品特色区域 -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">产品特色</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>数据分析</h3>
-                    <p>数据分析功能提供详尽的网球比赛数据报告。</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>机器学习</h3>
-                    <p>机器学习技术持续优化用户体验。</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-download"></i>
-                    </div>
-                    <h3>训练助手</h3>
-                    <p>训练助手帮助用户规划个性化网球训练计划。</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>赛事分析</h3>
-                    <p>赛事分析功能让用户更深入了解比赛数据。</p>
                 </div>
             </div>
         </div>
@@ -218,16 +225,15 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-bg-dots">
-                    <!-- 添加动画容器 -->
                     <div class="animation-container about-animation">
-                        <canvas id="aboutAnimationCanvas"></canvas> <!-- 使用特定ID -->
+                        <canvas id="aboutAnimationCanvas"></canvas>
                     </div>
                 </div>
                 <div class="about-text">
-                    <h2 class="section-title">晓田田科技</h2>
-                    <p>晓田田文化科技(上海)有限公司是一家专注于人工智能技术与体育结合的创新科技企业。</p>
-                    <p>我们致力于通过先进的AI视觉识别技术、深度学习算法和智能数据分析，为体育爱好者和专业运动员提供高效、精准的数字化解决方案。公司汇聚了在人工智能、移动应用开发和体育科技领域拥有丰富经验的技术专家，正在不断探索AI技术在体育领域的创新应用。</p>
-                    <a href="#contact" class="cta-button">联系我们</a>
+                    <h2 class="section-title" data-i18n="about.title">XiaoTianTian Tech</h2>
+                    <p data-i18n="about.p1">XiaoTianTian Culture & Technology (Shanghai) Co., Ltd. is an innovative technology company focused on combining artificial intelligence with sports.</p>
+                    <p data-i18n="about.p2">We are committed to providing efficient and precise digital solutions for sports enthusiasts and professional athletes through advanced AI visual recognition, deep learning algorithms, and intelligent data analytics. Our team brings together experts in AI, mobile development, and sports technology, continuously exploring innovative applications of AI in sports.</p>
+                    <a href="#contact" class="cta-button" data-i18n="about.cta">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -236,7 +242,7 @@
     <!-- 联系我们区域 -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">联系我们</h2>
+            <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
             <div class="contact-info">
                 <div class="email-contact">
                     <i class="fas fa-envelope"></i>
@@ -249,26 +255,26 @@
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
-            <p class="copyright">© 2025 晓田田文化科技(上海)有限公司</p>
+            <p class="copyright" data-i18n="footer.copyright">© 2025 XiaoTianTian Culture & Technology (Shanghai) Co., Ltd.</p>
         </div>
     </footer>
 
-    <!-- 简单的JavaScript实现平滑滚动 -->
+    <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // 平滑滚动导航
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
+
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-                    
+
                     const targetElement = document.querySelector(targetId);
-                    
+
                     if (targetElement) {
                         window.scrollTo({
-                            top: targetElement.offsetTop - 70, // 减去导航栏高度
+                            top: targetElement.offsetTop - 70,
                             behavior: 'smooth'
                         });
                     }
@@ -278,7 +284,7 @@
             // 移动端菜单切换
             const menuToggle = document.querySelector('.mobile-menu-toggle');
             const nav = document.querySelector('.nav');
-            
+
             if (menuToggle && nav) {
                 menuToggle.addEventListener('click', function() {
                     nav.classList.toggle('active');
@@ -286,6 +292,7 @@
             }
         });
     </script>
+    <script src="js/i18n.js"></script>
     <script src="js/tennis-animation.js"></script>
 </body>
 </html>

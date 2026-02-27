@@ -147,6 +147,74 @@ img {
     cursor: pointer;
 }
 
+/* Language Toggle */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.lang-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.lang-toggle i {
+    font-size: 0.95rem;
+}
+
+/* App Store Badge */
+.app-store-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #000;
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 12px;
+    text-decoration: none !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 10px;
+    border: none;
+}
+
+.app-store-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    color: #fff !important;
+    background: #111;
+}
+
+.app-store-badge i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.app-store-badge .badge-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.app-store-badge .badge-text small {
+    font-size: 0.65rem;
+    font-weight: 400;
+}
+
+.app-store-badge .badge-text span {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
 /* 曲线动画区域 (占位) */
 .wave-animation {
     height: 300px;
