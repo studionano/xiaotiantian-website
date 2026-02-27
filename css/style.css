@@ -69,6 +69,29 @@ img {
     color: var(--white);
 }
 
+/* Hero CTA按钮增强样式 */
+.cta-button-hero {
+    padding: 16px 35px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border: none;
+    box-shadow: 0 8px 20px rgba(107, 87, 203, 0.3);
+}
+
+.cta-button-hero:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(107, 87, 203, 0.4);
+}
+
+.cta-button-hero i {
+    font-size: 1.4rem;
+}
 
 .nav ul li a {
   position: relative; /* 为绝对定位的下划线创建相对定位上下文 */
@@ -179,23 +202,25 @@ img {
     align-items: center;
     background: #000;
     color: #fff !important;
-    padding: 10px 22px;
+    padding: 14px 28px;
     border-radius: 12px;
     text-decoration: none !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    gap: 10px;
-    border: none;
+    transition: all 0.3s ease;
+    gap: 12px;
+    border: 2px solid #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .app-store-badge:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     color: #fff !important;
     background: #111;
+    border-color: #555;
 }
 
 .app-store-badge i {
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #fff;
 }
 
@@ -206,12 +231,12 @@ img {
 }
 
 .app-store-badge .badge-text small {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     font-weight: 400;
 }
 
 .app-store-badge .badge-text span {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 600;
 }
 
@@ -424,9 +449,13 @@ img {
 
 /* 产品展示区域 - 调整后 */
 .products {
-    padding: 40px 0 0px; /* 增加底部padding，为手机留出空间 */
-    position: relative; /* 添加相对定位，便于子元素绝对定位 */
+    padding: 20px 0 0px;
+    position: relative;
     background: linear-gradient(to bottom, #E7E2F3, #FFFFFF);
+}
+
+.products .section-title {
+    margin-bottom: 1rem;
 }
 
 .product-content {
@@ -442,14 +471,17 @@ img {
     width: 40%;
     position: absolute;
     left: -5%;
-    bottom: 10%; /* 底部对齐 */
+    bottom: 10%;
     padding-right: 50px;
     text-align: left;
-    max-width: 400px; /* 限制最大宽度 */
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .product-description p {
-    margin-bottom: 30px; /* 调整段落与按钮之间的距离 */
+    margin-bottom: 30px;
 }
 
 /* 中间手机展示定位 */
@@ -679,6 +711,23 @@ img {
         width: 100%;
         padding-left: 0;
     }
+
+    .cta-button-hero {
+        padding: 14px 30px;
+        font-size: 1.1rem;
+    }
+
+    .app-store-badge {
+        padding: 12px 24px;
+    }
+
+    .app-store-badge i {
+        font-size: 2rem;
+    }
+
+    .app-store-badge .badge-text span {
+        font-size: 1.4rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -733,6 +782,20 @@ img {
     .main-title {
         font-size: 2.5rem;
     }
+
+    .cta-button-hero {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    .cta-button-hero i {
+        font-size: 1.2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 }
 
 @media (max-width: 576px) {
@@ -751,5 +814,17 @@ img {
     
     .feature {
         width: 100%;
+    }
+
+    .app-store-badge {
+        padding: 10px 20px;
+    }
+
+    .app-store-badge i {
+        font-size: 1.8rem;
+    }
+
+    .app-store-badge .badge-text span {
+        font-size: 1.2rem;
     }
 }
