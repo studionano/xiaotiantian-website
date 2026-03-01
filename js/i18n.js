@@ -9,7 +9,7 @@ const translations = {
         'nav.about': 'About',
         'nav.contact': 'Contact',
         'hero.title': 'SmartHit Tennis App',
-        'hero.subtitle': 'AI auto-detects rallies, Hawk-Eye trajectory playback, supports any frame rate video, instant analysis.<br>Clean interface, results in three steps—focus on every shot.',
+        'hero.subtitle': '<strong>• AI auto-detects rallies</strong><br><strong>• Colorful Hawk-Eye trajectory playback</strong><br><strong>• Supports any frame rate video, instant analysis</strong><br>Clean interface, ad-free—focus on every shot.',
         'hero.cta': 'Download on App Store',
         'products.title': 'SmartHit Tennis',
         'products.desc': 'SmartHit Tennis is an intelligent video analysis app designed for tennis enthusiasts and professional athletes. Using advanced AI small object detection technology, SmartHit Tennis can automatically identify and clip effective rallies from tennis videos, letting you focus on the highlights. The built-in intelligent analysis engine professionally evaluates your shot trajectory, footwork, and technique, providing data-driven performance reports.',
@@ -55,7 +55,7 @@ const translations = {
         'nav.about': '关于我们',
         'nav.contact': '联系我们',
         'hero.title': '击智网球 App',
-        'hero.subtitle': 'AI 自动识别回合，鹰眼轨迹回看，支持任意帧率视频，随拍随传随分析。<br>干净界面，三步出结果——专注你的每一拍。',
+        'hero.subtitle': '<strong>• AI 自动识别回合</strong><br><strong>• 鹰眼炫彩轨迹回看</strong><br><strong>• 支持任意帧率视频，随拍随传随分析</strong><br>干净界面，纯净无广告——专注你的每一拍。',
         'hero.cta': '在 App Store 下载',
         'products.title': '击智网球',
         'products.desc': '击智网球是一款专为网球爱好者和专业运动员打造的智能视频分析应用。通过先进的AI运动小物体检测识别技术，击智网球能够自动识别并剪辑网球视频中的有效回合，让您专注于比赛精华。应用内置智能分析引擎，可对您的击球轨迹、步伐移动和技术动作进行专业评估，提供数据化的表现报告。',
@@ -127,6 +127,13 @@ function setLanguage(lang) {
     // Update toggle label
     var langLabel = document.getElementById('langLabel');
     if (langLabel) langLabel.textContent = lang === 'en' ? '中文' : 'EN';
+
+    // Update banner image
+    var bannerImage = document.getElementById('bannerImage');
+    if (bannerImage) {
+        bannerImage.src = lang === 'en' ? 'images/Banner_EN.jpg' : 'images/Banner_CH.jpg';
+        bannerImage.alt = lang === 'en' ? 'SmartHit Tennis App Features' : '击智网球应用功能展示';
+    }
 
     // Store preference
     localStorage.setItem('preferred-lang', lang);

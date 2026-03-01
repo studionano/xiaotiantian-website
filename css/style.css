@@ -285,6 +285,20 @@ img {
     transform: translate(-50%, -50%);
 }
 
+/* 产品横幅区域 */
+.banner-container {
+    width: 100%;
+    margin-top: 70px; /* 导航栏高度 */
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
 /* 主标语区域 */
 .hero {
     padding: 80px 0;
@@ -449,13 +463,13 @@ img {
 
 /* 产品展示区域 - 调整后 */
 .products {
-    padding: 20px 0 0px;
+    padding: 7px 0 0px;
     position: relative;
     background: linear-gradient(to bottom, #E7E2F3, #FFFFFF);
 }
 
 .products .section-title {
-    margin-bottom: 1rem;
+    margin-bottom: 0.33rem;
 }
 
 .product-content {
@@ -463,7 +477,7 @@ img {
     flex-wrap: wrap;
     margin-top: 0px;
     position: relative; /* 相对定位 */
-    min-height: 400px; /* 确保有足够的高度容纳内容 */
+    min-height: 133px; /* 确保有足够的高度容纳内容 */
 }
 
 /* 左侧产品描述定位 */
