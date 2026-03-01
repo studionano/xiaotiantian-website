@@ -52,14 +52,19 @@
 
     <!-- 产品横幅区域 -->
     <section class="banner-container">
-        <img id="bannerImage" src="images/Banner_EN.jpg" alt="SmartHit Tennis App Features" class="banner-image">
+        <img id="bannerImage" src="images/Banner_EN.jpg" alt="SmartHit Tennis App Features" class="banner-image" loading="eager">
     </section>
 
     <!-- 主标语区域 -->
     <section id="hero" class="hero">
         <div class="container">
             <h1 class="main-title" data-i18n-html="hero.title">AI Empowering Sports,<br>Creating Infinite Possibilities</h1>
-            <p class="subtitle" data-i18n-html="hero.subtitle">Auto-detect game rallies, instantly generate highlights, deeply analyze technical data, and scientifically plan personalized training!</p>
+            <div class="subtitle" data-i18n-html="hero.subtitle">
+                <p><strong>Auto-detect game rallies</strong></p>
+                <p><strong>Instantly generate highlights</strong></p>
+                <p><strong>Deeply analyze technical data</strong></p>
+                <p>Scientifically plan personalized training</p>
+            </div>
             <a href="https://apps.apple.com/app/smarthit-tennis/id6751442505" class="cta-button cta-button-hero" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-apple"></i>
                 <span data-i18n="hero.cta">Download on App Store</span>

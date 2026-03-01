@@ -465,7 +465,7 @@ img {
 
 /* 产品展示区域 - 调整后 */
 .products {
-    padding: 7px 0 0px;
+    padding: 40px 0;
     position: relative;
     background: linear-gradient(to bottom, #E7E2F3, #FFFFFF);
 }
