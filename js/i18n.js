@@ -128,11 +128,20 @@ function setLanguage(lang) {
     var langLabel = document.getElementById('langLabel');
     if (langLabel) langLabel.textContent = lang === 'en' ? '中文' : 'EN';
 
-    // Update banner image
+    // Update banner image with fade effect
     var bannerImage = document.getElementById('bannerImage');
     if (bannerImage) {
-        bannerImage.src = lang === 'en' ? 'images/Banner_EN.jpg' : 'images/Banner_CH.jpg';
-        bannerImage.alt = lang === 'en' ? 'SmartHit Tennis App Features' : '击智网球应用功能展示';
+        // Fade out
+        bannerImage.style.opacity = '0';
+
+        setTimeout(function() {
+            // Change image source
+            bannerImage.src = lang === 'en' ? 'images/Banner_EN.jpg' : 'images/Banner_CH.jpg';
+            bannerImage.alt = lang === 'en' ? 'SmartHit Tennis App Features' : '击智网球应用功能展示';
+
+            // Fade in
+            bannerImage.style.opacity = '1';
+        }, 200);
     }
 
     // Store preference
@@ -141,6 +150,12 @@ function setLanguage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Preload both banner images
+    var imgEN = new Image();
+    var imgCH = new Image();
+    imgEN.src = 'images/Banner_EN.jpg';
+    imgCH.src = 'images/Banner_CH.jpg';
+
     var savedLang = localStorage.getItem('preferred-lang') || 'en';
     setLanguage(savedLang);
 
