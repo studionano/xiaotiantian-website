@@ -511,7 +511,8 @@ img {
     width: 40%;
     position: absolute;
     left: -5%;
-    bottom: 10%;
+    top: 50%;
+    transform: translateY(-50%);
     padding-right: 50px;
     text-align: left;
     max-width: 400px;
@@ -544,7 +545,8 @@ img {
     width: 40%;
     position: absolute;
     right: -5%;
-    bottom: 10%; /* 底部对齐 */
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 20px;
