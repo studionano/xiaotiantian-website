@@ -209,6 +209,8 @@ img {
     gap: 12px;
     border: 2px solid #333;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    user-select: none;
 }
 
 .app-store-badge:hover {
@@ -222,14 +224,12 @@ img {
 .app-store-badge i {
     font-size: 2.4rem;
     color: #fff;
-    pointer-events: none;
 }
 
 .app-store-badge .badge-text {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
-    pointer-events: none;
 }
 
 .app-store-badge .badge-text small {
@@ -304,13 +304,37 @@ img {
 
 /* 主标语区域 */
 .hero {
-    padding: 80px 0;
-    text-align: center;
+    padding: 50px 0;
     background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
 }
 
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
 .main-title {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -318,8 +342,8 @@ img {
 
 .subtitle {
     font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 40px;
+    max-width: 600px;
+    margin: 0 0 40px 0;
 }
 
 /* 业务范围区域样式 */
@@ -472,7 +496,7 @@ img {
 }
 
 .products .section-title {
-    margin-bottom: 0.33rem;
+    margin-bottom: 0.11rem;
 }
 
 .product-content {
@@ -796,8 +820,26 @@ img {
         font-size: 2rem;
     }
 
+    /* Hero区域响应式 */
+    .hero .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
     .main-title {
         font-size: 2.5rem;
+    }
+
+    .subtitle {
+        max-width: 100%;
     }
 
     .cta-button-hero {
