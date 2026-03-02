@@ -200,15 +200,15 @@ img {
 .app-store-badge {
     display: inline-flex;
     align-items: center;
-    background: #000;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #fff !important;
-    padding: 14px 28px;
-    border-radius: 12px;
+    padding: 16px 32px;
+    border-radius: 50px;
     text-decoration: none !important;
     transition: all 0.3s ease;
     gap: 12px;
-    border: 2px solid #333;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
     cursor: pointer !important;
     user-select: none;
     position: relative;
@@ -221,11 +221,10 @@ img {
 }
 
 .app-store-badge:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6);
     color: #fff !important;
-    background: #111;
-    border-color: #555;
+    background: linear-gradient(135deg, #5568d3 0%, #6a3e92 100%);
 }
 
 .app-store-badge i {
@@ -496,13 +495,13 @@ img {
 }
 
 .products .section-title {
-    margin-bottom: -10px;
+    margin-bottom: 40px;
 }
 
 .product-content {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 0px;
+    margin-top: 20px;
     position: relative; /* 相对定位 */
     min-height: 133px; /* 确保有足够的高度容纳内容 */
 }
