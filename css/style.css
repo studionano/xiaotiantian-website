@@ -535,7 +535,7 @@ img {
 
 .product-showcase img {
     transform: scale(0.85);
-    transform-origin: center bottom;
+    transform-origin: center top;
     display: block;
     margin: 0 auto;
 }
