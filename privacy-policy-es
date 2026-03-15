@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidad de VamosXX Tennis App - Protegiendo tu privacidad">
+    <title>Política de Privacidad - VamosXX Tennis App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1a1a1a;
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #27ae60;
+            text-align: center;
+        }
+
+        .version-info {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .version-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .version-info strong {
+            font-weight: 600;
+        }
+
+        .important-notice {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .important-notice h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .special-statement {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .special-statement h3 {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 22px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #27ae60;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .privacy-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+            border-left: 3px solid #27ae60;
+        }
+
+        .not-collect {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        table th {
+            background: #27ae60;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ecf0f1;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .contact-info {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .third-party-service {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+
+        .third-party-service h4 {
+            color: #495057;
+            margin-bottom: 8px;
+        }
+
+        .highlight-green {
+            background: #d4edda;
+            color: #155724;
+            padding: 3px 8px;
+            border-radius: 3px;
+        }
+
+        .divider {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #27ae60, transparent);
+            margin: 30px 0;
+        }
+
+        .lang-switcher {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .lang-switcher a {
+            display: inline-block;
+            padding: 6px 16px;
+            margin: 0 4px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #2c3e50;
+            background: #ecf0f1;
+            font-size: 14px;
+        }
+
+        .lang-switcher a.active {
+            background: #27ae60;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 15px;
+            }
+            
+            .container {
+                padding: 25px 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            h3 {
+                font-size: 17px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            table th, table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <a href="privacy-policy.html">中文</a>
+            <a href="privacy-policy-en.html">English</a>
+            <a href="privacy-policy-es.html" class="active">Español</a>
+        </div>
+
+        <h1>Política de Privacidad de VamosXX Tennis App</h1>
+        
+        <div class="version-info">
+            <p><strong>Versión actual:</strong> 1.0.1</p>
+            <p><strong>Fecha de actualización:</strong> Octubre 2025</p>
+            <p><strong>Fecha de vigencia:</strong> Octubre 2025</p>
+        </div>
+
+        <p>VamosXX Tennis App (en adelante "nosotros" o "VamosXX") valora tu privacidad. Esta política explica cómo recopilamos, utilizamos, almacenamos y protegemos tu información personal.</p>
+
+        <div class="important-notice">
+            <h3>⚠️ Aviso Importante</h3>
+            <p><strong>Por favor, lee esta política de privacidad detenidamente y asegúrate de comprenderla y aceptarla completamente antes de utilizar nuestros servicios.</strong></p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="special-statement">
+            <h3>【Declaración Especial】</h3>
+            <p>Esta aplicación cumple con los siguientes principios y regulaciones de protección de privacidad:</p>
+            <ul>
+                <li>Cumplimiento de la Ley de Protección de Información Personal de la República Popular China</li>
+                <li>Cumplimiento de la Ley de Ciberseguridad de la República Popular China</li>
+                <li>Cumplimiento del marco de Transparencia de Seguimiento de Apps (ATT) de Apple</li>
+                <li>Cumplimiento de los requisitos del Manifiesto de Privacidad de Apple (iOS 17+)</li>
+                <li>No te rastreamos a través de aplicaciones o sitios web</li>
+                <li>No utilizamos tu información personal con fines publicitarios</li>
+            </ul>
+        </div>
+
+        <hr class="divider">
+
+        <h2>1. Información que Recopilamos</h2>
+
+        <h3>1.1 Información de la Cuenta</h3>
+        <p>Para proporcionar nuestros servicios, necesitamos recopilar la siguiente información:</p>
+
+        <div class="privacy-item">
+            <h4><strong>Número de Teléfono</strong> (si eliges registrarte con número de teléfono)</h4>
+            <ul>
+                <li><strong>Propósito:</strong> Registro de cuenta, verificación de identidad, protección de seguridad</li>
+                <li><strong>Almacenamiento:</strong> Almacenamiento cifrado en la base de datos Tencent CloudBase</li>
+                <li><strong>¿Es obligatorio?:</strong> No (puedes elegir otros métodos de inicio de sesión)</li>
+            </ul>
+        </div>
+
+        <div class="privacy-item">
+            <h4><strong>Información de inicio de sesión con WeChat</strong> (si eliges iniciar sesión con WeChat)</h4>
+            <ul>
+                <li><strong>Datos recopilados:</strong> OpenID de WeChat, nombre de usuario, avatar (si es autorizado)</li>
+                <li><strong>Propósito:</strong> Creación de cuenta, identificación de identidad</li>
+                <li><strong>Almacenamiento:</strong> Almacenamiento cifrado en la base de datos Tencent CloudBase</li>
+                <li><strong>¿Es obligatorio?:</strong> No (puedes elegir otros métodos de inicio de sesión)</li>
+            </ul>
+        </div>
+
+        <div class="privacy-item">
+            <h4><strong>Información de Apple ID</strong> (si eliges iniciar sesión con Apple ID)</h4>
+            <ul>
+                <li><strong>Datos recopilados:</strong> Identificador de usuario de Apple, correo electrónico (si es autorizado)</li>
+                <li><strong>Propósito:</strong> Creación de cuenta, verificación de identidad</li>
+                <li><strong>Almacenamiento:</strong> Almacenamiento cifrado en la base de datos Tencent CloudBase</li>
+                <li><strong>¿Es obligatorio?:</strong> No (puedes elegir otros métodos de inicio de sesión)</li>
+            </ul>
+        </div>
+
+        <h3>1.2 Perfil Personal (Opcional)</h3>
+        <p>Puedes proporcionar opcionalmente la siguiente información para una mejor experiencia:</p>
+        <ul>
+            <li><strong>Información básica:</strong> Apodo, género, avatar</li>
+            <li><strong>Información de tenis:</strong> Mano dominante, nivel de tenis, biografía personal</li>
+            <li><strong>Propósito:</strong> Experiencia de servicio personalizada, análisis de datos de entrenamiento</li>
+            <li><strong>¿Es obligatorio?:</strong> No, puedes elegir no proporcionar esta información</li>
+        </ul>
+
+        <h3>1.3 Información del Dispositivo y de Uso</h3>
+        <p>Para optimizar el rendimiento y mejorar nuestros servicios, recopilamos automáticamente:</p>
+        <ul>
+            <li><strong>Información del dispositivo:</strong> Modelo del dispositivo, versión del sistema operativo, identificador del dispositivo</li>
+            <li><strong>Estadísticas de uso:</strong> Frecuencia de uso de funciones, duración del procesamiento de video, registros de sesión</li>
+            <li><strong>Información de diagnóstico:</strong> Registros de fallos, datos de rendimiento, informes de errores</li>
+            <li><strong>Propósito:</strong> Optimizar el rendimiento de la app, mejorar la experiencia del usuario, resolver problemas técnicos</li>
+            <li><strong>Procesamiento:</strong> Estadísticas locales; solo se cargan datos anonimizados y no identificables personalmente</li>
+        </ul>
+
+        <h3>1.4 Información que Explícitamente No Recopilamos</h3>
+        <ul style="list-style: none; margin-left: 0;">
+            <li class="not-collect">❌ El contenido de tus videos de entrenamiento</li>
+            <li class="not-collect">❌ Tu ubicación geográfica</li>
+            <li class="not-collect">❌ Tus contactos o libreta de direcciones</li>
+            <li class="not-collect">❌ Datos de uso de otras aplicaciones</li>
+            <li class="not-collect">❌ Cualquier información personal sensible</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>2. Propósito del Uso de la Información</h2>
+        <p>Recopilamos y utilizamos tu información personal únicamente para los siguientes propósitos legítimos:</p>
+
+        <h3>2.1 Prestación y Mejora de Servicios</h3>
+        <ul>
+            <li>Crear y gestionar tu cuenta</li>
+            <li>Proporcionar funciones de recorte y edición de video</li>
+            <li>Guardar tus registros de entrenamiento y preferencias</li>
+            <li>Optimizar el rendimiento y la precisión del modelo de IA</li>
+            <li>Mejorar las funciones de la aplicación y la experiencia del usuario</li>
+        </ul>
+
+        <h3>2.2 Seguridad y Prevención</h3>
+        <ul>
+            <li>Verificar la identidad del usuario y prevenir el fraude</li>
+            <li>Detectar y prevenir amenazas de seguridad</li>
+            <li>Garantizar el funcionamiento seguro y estable de nuestros servicios</li>
+            <li>Responder a requisitos legales y solicitudes de las autoridades</li>
+        </ul>
+
+        <h3>2.3 Comunicación y Soporte</h3>
+        <ul>
+            <li>Responder a tus consultas y comentarios</li>
+            <li>Enviar notificaciones y actualizaciones importantes del servicio</li>
+            <li>Proporcionar soporte técnico y atención al cliente</li>
+        </ul>
+
+        <h3>2.4 No Utilizaremos Tu Información Para</h3>
+        <ul style="list-style: none; margin-left: 0;">
+            <li class="not-collect">❌ Fines publicitarios o de marketing</li>
+            <li class="not-collect">❌ Venta o alquiler a terceros</li>
+            <li class="not-collect">❌ Seguimiento entre aplicaciones o sitios web</li>
+            <li class="not-collect">❌ Cualquier propósito no relacionado con nuestros servicios</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>3. Procesamiento Local de Datos (Característica Principal)</h2>
+
+        <h3>3.1 Procesamiento Local de Datos de Video</h3>
+        <p class="highlight-green">Esta es nuestra medida de protección de privacidad más importante:</p>
+        <ul>
+            <li><strong>Ubicación de almacenamiento:</strong> Todos los videos de entrenamiento se almacenan completamente en tu dispositivo local</li>
+            <li><strong>Método de procesamiento:</strong> El reconocimiento y recorte por IA se realiza utilizando la GPU de tu dispositivo</li>
+            <li><strong>Garantía de privacidad:</strong> El contenido de video nunca se sube a ningún servidor</li>
+            <li><strong>Control del usuario:</strong> Puedes eliminar los archivos de video locales en cualquier momento</li>
+        </ul>
+
+        <h3>3.2 Resultados del Procesamiento</h3>
+        <ul>
+            <li><strong>Almacenamiento local:</strong> Los resultados de reconocimiento de peloteos, estadísticas de duración y otros datos se almacenan localmente</li>
+            <li><strong>Sincronización en la nube (Opcional):</strong> Solo se sincronizan metadatos (como fecha y duración del entrenamiento) — el contenido de video nunca se incluye</li>
+            <li><strong>Control total:</strong> Puedes elegir si habilitar la sincronización en la nube</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>4. Compartición y Divulgación de Información</h2>
+
+        <h3>4.1 No Compartimos Activamente Tu Información Personal</h3>
+        <p>No compartiremos tu información personal con terceros, excepto en las siguientes circunstancias:</p>
+        <ul>
+            <li>Con tu consentimiento explícito</li>
+            <li>Según lo requieran las leyes y regulaciones</li>
+            <li>Según lo requieran las autoridades judiciales o gubernamentales</li>
+            <li>Para proteger nuestros derechos e intereses legítimos o los de terceros</li>
+        </ul>
+
+        <h3>4.2 Servicios de Terceros</h3>
+        <p>Utilizamos los siguientes servicios de terceros, que pueden tener acceso a parte de tu información:</p>
+
+        <div class="third-party-service">
+            <h4>Servicio de SMS de Tencent Cloud</h4>
+            <ul>
+                <li><strong>Propósito:</strong> Envío de códigos de verificación por teléfono</li>
+                <li><strong>Información compartida:</strong> Número de teléfono, código de verificación</li>
+                <li><strong>Política de privacidad:</strong> <a href="https://cloud.tencent.com/document/product/301/11470" target="_blank">https://cloud.tencent.com/document/product/301/11470</a></li>
+            </ul>
+        </div>
+
+        <div class="third-party-service">
+            <h4>Plataforma Abierta de WeChat</h4>
+            <ul>
+                <li><strong>Propósito:</strong> Proporcionar funcionalidad de inicio de sesión con WeChat</li>
+                <li><strong>Información compartida:</strong> Información de autorización de WeChat (OpenID)</li>
+                <li><strong>Política de privacidad:</strong> <a href="https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=privacy" target="_blank">Política de Privacidad de WeChat</a></li>
+            </ul>
+        </div>
+
+        <div class="third-party-service">
+            <h4>Tencent CloudBase</h4>
+            <ul>
+                <li><strong>Propósito:</strong> Almacenamiento de información de cuenta y datos de usuario</li>
+                <li><strong>Información compartida:</strong> Información de cuenta, estadísticas de uso</li>
+                <li><strong>Política de privacidad:</strong> <a href="https://cloud.tencent.com/document/product/301/11470" target="_blank">https://cloud.tencent.com/document/product/301/11470</a></li>
+            </ul>
+        </div>
+
+        <div class="third-party-service">
+            <h4>Inicio de sesión con Apple</h4>
+            <ul>
+                <li><strong>Propósito:</strong> Proporcionar funcionalidad de inicio de sesión con Apple ID</li>
+                <li><strong>Información compartida:</strong> Identificador de usuario de Apple, correo electrónico (si es autorizado)</li>
+                <li><strong>Política de privacidad:</strong> <a href="https://www.apple.com/legal/privacy/" target="_blank">https://www.apple.com/legal/privacy/</a></li>
+            </ul>
+        </div>
+
+        <h3>4.3 Seguridad de Datos de Terceros</h3>
+        <ul>
+            <li>Todos los servicios de terceros han sido evaluados en materia de seguridad</li>
+            <li>Solo se transmite la información de autenticación necesaria</li>
+            <li>Los datos de video principales siempre se procesan localmente y nunca se transmiten a terceros</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>5. Almacenamiento y Protección de la Información</h2>
+
+        <h3>5.1 Ubicación de Almacenamiento</h3>
+        <ul>
+            <li><strong>Datos de video:</strong> Almacenados completamente en tu dispositivo local</li>
+            <li><strong>Información de cuenta:</strong> Almacenada en servidores Tencent CloudBase ubicados en China</li>
+            <li><strong>Estadísticas de uso:</strong> Datos anonimizados almacenados en nuestros servidores</li>
+        </ul>
+
+        <h3>5.2 Período de Retención</h3>
+        <ul>
+            <li><strong>Información de cuenta:</strong> Se conserva hasta que canceles tu cuenta</li>
+            <li><strong>Estadísticas de uso:</strong> Se eliminan automáticamente después de 12 meses</li>
+            <li><strong>Videos locales:</strong> Se conservan o eliminan a tu discreción</li>
+        </ul>
+
+        <h3>5.3 Medidas de Seguridad</h3>
+        <p>Implementamos las siguientes medidas de seguridad para proteger tu información:</p>
+        <ul>
+            <li><strong>Transmisión cifrada:</strong> Los datos se transmiten mediante cifrado HTTPS/TLS</li>
+            <li><strong>Almacenamiento cifrado:</strong> La información sensible se almacena con cifrado</li>
+            <li><strong>Control de acceso:</strong> Restricciones estrictas de acceso para empleados</li>
+            <li><strong>Auditorías de seguridad:</strong> Evaluaciones y auditorías de seguridad periódicas</li>
+            <li><strong>Procesamiento local:</strong> Los datos de video nunca salen de tu dispositivo, eliminando fundamentalmente los riesgos de filtración</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>6. Tus Derechos</h2>
+        <p>De acuerdo con las leyes y regulaciones aplicables, tienes los siguientes derechos sobre tu información personal:</p>
+
+        <h3>6.1 Consultar y Modificar</h3>
+        <ul>
+            <li>Puedes ver y editar tu información en cualquier momento en la página de "Perfil Personal"</li>
+            <li>Puedes modificar tu apodo, avatar, género y otros datos personales</li>
+        </ul>
+
+        <h3>6.2 Eliminar Datos</h3>
+        <ul>
+            <li><strong>Eliminar videos locales:</strong> Mantén presionado un video dentro de la app para eliminarlo</li>
+            <li><strong>Eliminar datos de cuenta:</strong> Utiliza la función "Ajustes - Cuenta y Seguridad - Eliminar Cuenta"</li>
+            <li><strong>Plazo de eliminación:</strong> Completaremos la eliminación dentro de los 15 días hábiles posteriores a recibir tu solicitud</li>
+        </ul>
+
+        <h3>6.3 Retirar el Consentimiento</h3>
+        <ul>
+            <li>Puedes desactivar los permisos de la app en cualquier momento a través de los ajustes del sistema de tu dispositivo</li>
+            <li>Desactivar los permisos puede afectar el funcionamiento normal de ciertas funciones</li>
+        </ul>
+
+        <h3>6.4 Quejas y Denuncias</h3>
+        <ul>
+            <li>Si consideras que tus derechos de información personal han sido vulnerados, puedes contactarnos a través de los siguientes canales</li>
+            <li><strong>Correo electrónico:</strong> info@xiaotiantian.tech</li>
+            <li>Responderemos a tu solicitud dentro de los 15 días hábiles</li>
+        </ul>
+
+        <h3>6.5 Cancelación de Cuenta</h3>
+        <ul>
+            <li>Puedes solicitar la cancelación de tu cuenta en cualquier momento</li>
+            <li>Después de la cancelación, eliminaremos o anonimizaremos tu información personal</li>
+            <li>Asegúrate de haber respaldado los datos que desees conservar antes de la cancelación</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>7. Uso de Permisos</h2>
+        <p>Esta aplicación requiere los siguientes permisos del dispositivo:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Permiso</th>
+                    <th>Propósito</th>
+                    <th>Cuándo se solicita</th>
+                    <th>Obligatorio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Cámara</strong></td>
+                    <td>Grabar videos de entrenamiento de tenis</td>
+                    <td>Al pulsar el botón de grabación</td>
+                    <td>Sí</td>
+                </tr>
+                <tr>
+                    <td><strong>Micrófono</strong></td>
+                    <td>Grabar audio del video</td>
+                    <td>Al pulsar el botón de grabación</td>
+                    <td>Sí</td>
+                </tr>
+                <tr>
+                    <td><strong>Acceso a la Biblioteca de Fotos</strong></td>
+                    <td>Seleccionar y analizar videos existentes</td>
+                    <td>Al seleccionar un video</td>
+                    <td>Sí</td>
+                </tr>
+                <tr>
+                    <td><strong>Guardar en Biblioteca de Fotos</strong></td>
+                    <td>Guardar videos procesados</td>
+                    <td>Al guardar un video</td>
+                    <td>Sí</td>
+                </tr>
+                <tr>
+                    <td><strong>Red</strong></td>
+                    <td>Verificación de inicio de sesión, sincronización de datos</td>
+                    <td>Durante el inicio de sesión o sincronización</td>
+                    <td>Sí</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Gestión de permisos:</strong> Puedes activar o desactivar estos permisos en cualquier momento en los ajustes del sistema iOS. Desactivar los permisos puede impedir que las funciones relacionadas funcionen correctamente, pero no afectará a tus datos existentes.</p>
+
+        <hr class="divider">
+
+        <h2>8. Protección de Menores</h2>
+
+        <h3>8.1 Restricciones de Edad</h3>
+        <ul>
+            <li>Esta aplicación es apta para usuarios de 4 años en adelante</li>
+            <li>Si eres menor de 18 años, por favor lee esta política acompañado de un tutor</li>
+            <li>Los menores deben obtener el consentimiento de su tutor antes de usar este servicio</li>
+        </ul>
+
+        <h3>8.2 Aviso para Tutores</h3>
+        <ul>
+            <li>Recomendamos que los tutores guíen a los menores al usar esta aplicación</li>
+            <li>Si descubres que hemos recopilado información personal de un menor sin el consentimiento del tutor, por favor contáctanos de inmediato</li>
+            <li>Eliminaremos la información correspondiente de inmediato</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>9. Actualizaciones de esta Política de Privacidad</h2>
+
+        <h3>9.1 Notificaciones de Actualización</h3>
+        <ul>
+            <li>Podemos actualizar esta política de privacidad periódicamente</li>
+            <li>Los cambios significativos se comunicarán mediante notificaciones dentro de la app, ventanas emergentes u otros medios</li>
+            <li>La política actualizada entra en vigor inmediatamente después de su publicación</li>
+        </ul>
+
+        <h3>9.2 Definición de Cambios Significativos</h3>
+        <p>Se consideran cambios significativos los siguientes:</p>
+        <ul>
+            <li>Cambios importantes en nuestro modelo de servicio</li>
+            <li>Cambios importantes en cómo se recopila, utiliza o almacena la información personal</li>
+            <li>Cambios importantes en tus derechos y cómo se ejercen</li>
+            <li>Cambios en nuestra información de contacto y canales de queja</li>
+        </ul>
+
+        <h3>9.3 El Uso Continuado Constituye Aceptación</h3>
+        <ul>
+            <li>Tu uso continuado del servicio después de una actualización de la política constituye la aceptación de la política actualizada</li>
+            <li>Si no estás de acuerdo con la política actualizada, puedes dejar de usar el servicio y cancelar tu cuenta</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>10. Contáctanos</h2>
+        <div class="contact-info">
+            <p>Si tienes alguna pregunta, comentario o sugerencia sobre esta política de privacidad, contáctanos a través de los siguientes canales:</p>
+            <ul>
+                <li><strong>Correo electrónico:</strong> info@xiaotiantian.tech</li>
+                <li><strong>Comentarios dentro de la app:</strong> Ajustes - Ayuda y Comentarios - Contáctanos</li>
+            </ul>
+            <p>Responderemos a tu solicitud dentro de los <strong>15 días hábiles</strong> posteriores a recibir tus comentarios.</p>
+        </div>
+
+        <hr class="divider">
+
+        <h2>11. Ámbito de Aplicación</h2>
+
+        <h3>11.1 Ámbito Geográfico</h3>
+        <p>Esta política de privacidad se aplica a los usuarios dentro del territorio de la República Popular China (excluyendo la Región Administrativa Especial de Hong Kong, la Región Administrativa Especial de Macao y Taiwán).</p>
+
+        <h3>11.2 Ámbito de Plataforma</h3>
+        <p>Esta política de privacidad se aplica a la aplicación VamosXX Tennis para iOS.</p>
+
+        <hr class="divider">
+
+        <div class="important-notice">
+            <h3>【Última Actualización】</h3>
+            <p>Esta política de privacidad fue actualizada por última vez en <strong>octubre de 2025</strong>.</p>
+            <p style="margin-top: 10px;">¡Gracias por confiar y usar VamosXX Tennis! Nos comprometemos a proteger tu privacidad.</p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="footer">
+            <p><strong>Información del Desarrollador:</strong></p>
+            <ul style="list-style: none; margin: 10px 0;">
+                <li><strong>Nombre:</strong> Xiaotiantian Technology</li>
+                <li><strong>Correo electrónico:</strong> info@xiaotiantian.tech</li>
+            </ul>
+            <p style="margin-top: 20px;">&copy; 2025 Xiaotiantian Technology - VamosXX Tennis</p>
+        </div>
+    </div>
+</body>
+</html>
